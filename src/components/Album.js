@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './style.css'
 
 const Album = (props) => {
@@ -7,9 +8,11 @@ const Album = (props) => {
     <div className="album">
       <img alt={title} src={image} className="album-art" />
       <div className="album-info-hold">
-        <p>
-          {artist} - {title}
-        </p>
+        <Link to={`/album/${id}`}>
+          <p>
+            {artist} - {title}
+          </p>
+        </Link>
 
         <p>{year}</p>
       </div>
